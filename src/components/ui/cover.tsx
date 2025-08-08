@@ -112,7 +112,8 @@ export const Cover = ({
           filter: { duration: 0.2 },
         }}
         className={cn(
-          "dark:text-white inline-block text-neutral-900 relative z-20 group-hover/cover:text-white transition duration-200",
+          "inline-block relative z-20 transition duration-200",
+          hovered ? "text-white" : "text-neutral-900", // force white when hovered/touched
           className
         )}
       >
