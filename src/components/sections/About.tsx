@@ -4,11 +4,13 @@ import { Timeline } from "@/components/ui/timeline";
 export function AboutTimeline() {
   const data = [
     {
-      title: "2024",
+      title: "🌱 Deep Roots, Strong Foundation",
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+            Palm trees grow deep, stable roots before they ever reach the sky.
+            Just like how financial freedom starts with a strong foundation in
+            self-custody and security.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -44,16 +46,18 @@ export function AboutTimeline() {
       ),
     },
     {
-      title: "Early 2023",
+      title: "💪 Built to Withstand Any Storm",
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
+            No matter how strong the winds, palm trees don't break. They bend,
+            adapt, and keep growing—just like crypto in Africa, thriving despite
+            challenges.
           </p>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
+            We are committed to building a resilient platform that can adapt to
+            the ever-changing landscape of Web3, providing a stable foundation
+            for your assets.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -89,27 +93,29 @@ export function AboutTimeline() {
       ),
     },
     {
-      title: "Changelog",
+      title: "🚀 Sky-High Potential",
       content: (
         <div>
           <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Deployed 5 new components on Aceternity today
+            Palm trees don't stop growing. They reach for the sky, just like
+            Web3 innovation is unlocking limitless financial possibilities for
+            millions of Africans.
           </p>
           <div className="mb-8">
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Card grid component
+              ✅ Empowering communities through decentralized finance
             </div>
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Startup template Aceternity
+              ✅ Providing access to global markets
             </div>
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Random file upload lol
+              ✅ Building a bridge to the future of finance
             </div>
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Himesh Reshammiya Music CD
+              ✅ Fostering financial inclusion
             </div>
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Salman Bhai Fan Club registrations open
+              ✅ Creating a secure and user-friendly experience
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -146,6 +152,7 @@ export function AboutTimeline() {
       ),
     },
   ];
+
   return (
     <div className="relative w-full overflow-clip">
       <Timeline data={data} />
