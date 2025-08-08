@@ -96,7 +96,7 @@ export function AboutTimeline() {
       title: "🚀 Sky-High Potential",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-4 text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Palm trees don't stop growing. They reach for the sky, just like
             Web3 innovation is unlocking limitless financial possibilities for
             millions of Africans.
