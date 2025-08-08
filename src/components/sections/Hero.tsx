@@ -50,7 +50,8 @@ export function Hero() {
           className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
         >
           Securely manage, trade, and explore the world of cryptocurrencies. Our
-          non-custodial wallet gives you full control of your digital assets.
+          non-custodial wallet gives you{" "}
+          <Cover>full control of your digital assets.</Cover>
         </motion.p>
         <motion.div
           initial={{

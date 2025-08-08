@@ -43,8 +43,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           <TextGenerateEffect words={`The Story Behind PALMA`} />
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          Palma Wallet has been evolving for the past 2 years. Here&apos;s a
-          timeline of our journey.
+          The taller the palm tree, the deeper its roots.
         </p>
       </div>
 
