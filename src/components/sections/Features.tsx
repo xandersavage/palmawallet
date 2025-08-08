@@ -1,13 +1,12 @@
 import { cn } from "@/lib/utils";
 import {
-  IconAdjustmentsBolt,
-  IconCloud,
-  IconCurrencyDollar,
-  IconEaseInOut,
-  IconHeart,
-  IconHelp,
-  IconRouteAltLeft,
-  IconTerminal2,
+  IconBolt, // New icon for lightning fast
+  IconShield, // New icon for privacy
+  IconMapPin, // New icon for Africa-first
+  IconGauge,
+  IconLock, // Retained from the last conversation
+  IconDeviceMobile,
+  IconUsers,
 } from "@tabler/icons-react";
 import { TypewriterEffect } from "../ui/typewriter-effect";
 
@@ -26,50 +25,41 @@ export function Features() {
   ];
   const features = [
     {
-      title: "Built for developers",
+      title: "Self-Custody Security",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
-      icon: <IconTerminal2 />,
+        "Your keys, your crypto. Complete control over your digital assets with military-grade security.",
+      icon: <IconLock />,
     },
     {
-      title: "Ease of use",
+      title: "Lightning Fast",
       description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
-      icon: <IconEaseInOut />,
+        "Send and receive crypto instantly across Africa with minimal fees and maximum speed.",
+      icon: <IconBolt />, // Changed from IconGauge
     },
     {
-      title: "Pricing like no other",
+      title: "Africa-First Design",
       description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
-      icon: <IconCurrencyDollar />,
+        "Built for African users, supporting local currencies and payment methods.",
+      icon: <IconMapPin />, // Changed from IconGlobe
     },
     {
-      title: "100% Uptime guarantee",
-      description: "We just cannot be taken down by anyone.",
-      icon: <IconCloud />,
-    },
-    {
-      title: "Multi-tenant Architecture",
-      description: "You can simply share passwords instead of buying new seats",
-      icon: <IconRouteAltLeft />,
-    },
-    {
-      title: "24/7 Customer Support",
+      title: "Mobile-First",
       description:
-        "We are available a 100% of the time. Atleast our AI Agents are.",
-      icon: <IconHelp />,
+        "Optimized for mobile devices with offline capabilities for areas with limited connectivity.",
+      icon: <IconDeviceMobile />,
     },
-    // {
-    //   title: "Money back guarantee",
-    //   description:
-    //     "If you donot like EveryAI, we will convince you to like us.",
-    //   icon: <IconAdjustmentsBolt />,
-    // },
-    // {
-    //   title: "And everything else",
-    //   description: "I just ran out of copy ideas. Accept my sincere apologies",
-    //   icon: <IconHeart />,
-    // },
+    {
+      title: "Privacy Protected",
+      description:
+        "Your financial privacy is paramount. No KYC required for basic wallet functions.",
+      icon: <IconShield />, // Changed from IconMasks
+    },
+    {
+      title: "Global Community",
+      description:
+        "Join a growing global community of crypto enthusiasts building financial freedom together.",
+      icon: <IconUsers />,
+    },
   ];
   return (
     <div>
@@ -98,14 +88,14 @@ const Feature = ({
     <div
       className={cn(
         "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
-        (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
-        index < 4 && "lg:border-b dark:border-neutral-800"
+        (index === 0 || index === 3) && "lg:border-l dark:border-neutral-800",
+        index < 3 && "lg:border-b dark:border-neutral-800"
       )}
     >
-      {index < 4 && (
+      {(index === 0 || index === 1 || index === 2) && (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
       )}
-      {index >= 4 && (
+      {(index === 3 || index === 4 || index === 5) && (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
       )}
       <div className="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
