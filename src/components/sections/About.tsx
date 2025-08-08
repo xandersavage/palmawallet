@@ -7,7 +7,7 @@ export function AboutTimeline() {
       title: "🌱 Deep Roots, Strong Foundation",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-4 text-sm font-normal text-neutral-800 md:text-lg lg:text-2xl dark:text-neutral-200">
             Palm trees grow deep, stable roots before they ever reach the sky.
             Just like how financial freedom starts with a strong foundation in
             self-custody and security.
@@ -49,12 +49,12 @@ export function AboutTimeline() {
       title: "💪 Built to Withstand Any Storm",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-4 text-sm font-normal text-neutral-800 md:text-lg lg:text-2xl dark:text-neutral-200">
             No matter how strong the winds, palm trees don't break. They bend,
             adapt, and keep growing—just like crypto in Africa, thriving despite
             challenges.
           </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mb-4 text-sm font-normal text-neutral-800 md:text-lg lg:text-2xl dark:text-neutral-200">
             We are committed to building a resilient platform that can adapt to
             the ever-changing landscape of Web3, providing a stable foundation
             for your assets.
@@ -96,12 +96,12 @@ export function AboutTimeline() {
       title: "🚀 Sky-High Potential",
       content: (
         <div>
-          <p className="mb-4 text-sm font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Palm trees don't stop growing. They reach for the sky, just like
-            Web3 innovation is unlocking limitless financial possibilities for
-            millions of Africans.
+          <p className="mb-4 text-sm font-normal text-neutral-800 md:text-lg lg:text-2xl dark:text-neutral-200">
+            Palm trees don&apos;t stop growing. They reach for the sky, just
+            like Web3 innovation is unlocking limitless financial possibilities
+            for millions of Africans.
           </p>
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
               ✅ Empowering communities through decentralized finance
             </div>
@@ -117,7 +117,7 @@ export function AboutTimeline() {
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
               ✅ Creating a secure and user-friendly experience
             </div>
-          </div>
+          </div> */}
           <div className="grid grid-cols-2 gap-4">
             <img
               src="https://assets.aceternity.com/pro/hero-sections.png"
