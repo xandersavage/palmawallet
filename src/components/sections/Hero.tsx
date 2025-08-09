@@ -1,11 +1,27 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { IconBrandApple, IconBrandGooglePlay } from "@tabler/icons-react";
+import { useEffect, useState } from "react";
 
 export function Hero() {
+  // We use a state variable to track if the component has mounted on the client
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    // This effect runs only once after the component mounts on the client
+    setIsClient(true);
+  }, []);
+
+  // If we are on the server or before the client-side JS has run,
+  // we render nothing to avoid a flash of unstyled content.
+  if (!isClient) {
+    return null;
+  }
+
   return (
     <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
+      {/* Background gradient lines */}
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-emerald-500 to-transparent" />
       </div>
@@ -15,9 +31,11 @@ export function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-px w-full bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
       </div>
+
       <div className="px-4 py-10 md:py-20">
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
-          {"Your Gateway to Decentralized Finance"
+        {/* HEADING */}
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold md:text-4xl lg:text-7xl">
+          {"Unlock Your Financial Freedom with Palma Wallet."
             .split(" ")
             .map((word, index) => (
               <motion.span
@@ -29,48 +47,34 @@ export function Hero() {
                   delay: index * 0.1,
                   ease: "easeInOut",
                 }}
-                className="mr-2 inline-block"
+                className="mr-2 inline-block bg-gradient-to-r from-slate-800 to-emerald-500 bg-clip-text text-transparent dark:from-slate-200 dark:to-emerald-400"
               >
                 {word}
               </motion.span>
             ))}
         </h1>
+
+        {/* SUBHEADING */}
         <motion.p
           initial={{
             opacity: 0,
+            y: 10,
           }}
           animate={{
             opacity: 1,
+            y: 0,
           }}
           transition={{
             duration: 0.3,
             delay: 0.8,
           }}
-          className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
+          className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-medium text-slate-700 dark:text-neutral-300"
         >
-          Securely manage, trade, and explore the world of cryptocurrencies. Our
-          non-custodial wallet gives you full control of your digital assets.
+          Your money, your rules. Palma Wallet is the secure, non-custodial way
+          for Nigerians to manage their wealth and build their financial future.
         </motion.p>
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 0.3,
-            delay: 1,
-          }}
-          className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
-        >
-          <button className="flex w-60 transform items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-600">
-            <IconBrandApple /> Get it on App Store
-          </button>
-          <button className="flex w-60 transform items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
-            <IconBrandGooglePlay /> Get it on Google Play
-          </button>
-        </motion.div>
+
+        {/* BUTTONS */}
         <motion.div
           initial={{
             opacity: 0,
@@ -83,6 +87,30 @@ export function Hero() {
           transition={{
             duration: 0.3,
             delay: 1.2,
+          }}
+          className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
+        >
+          <button className="flex w-60 transform items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-600">
+            <IconBrandApple /> Get it on App Store
+          </button>
+          <button className="flex w-60 transform items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+            <IconBrandGooglePlay /> Get it on Google Play
+          </button>
+        </motion.div>
+
+        {/* PREVIEW IMAGE */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 10,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 1.5,
           }}
           className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
         >
