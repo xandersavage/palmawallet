@@ -1,7 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
-import Image from "next/image";
 import {
   motion,
   AnimatePresence,
@@ -10,6 +9,7 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -120,7 +120,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-base lg:text-lg font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "hidden flex-1 flex-row items-center justify-center space-x-2 text-base lg:text-lg font-medium text-neutral-400 transition duration-200 hover:text-emerald-500 lg:flex lg:space-x-2",
         className
       )}
     >
@@ -236,18 +236,20 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 flex items-center space-x-2 text-sm font-normal text-black"
     >
-      <img
-        src="https://assets.aceternity.com/logo-dark.png"
-        alt="logo"
-        className="h-8 w-8 transition-all duration-300 sm:h-10 sm:w-10 lg:h-12 lg:w-12"
-      />
+      <div className="relative h-8 w-8 transition-all duration-300 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
+        <Image
+          src="/images/logo-2.png"
+          alt="PALMA logo"
+          fill
+          style={{ objectFit: "contain" }}
+        />
+      </div>
       <span className="text-xl font-medium text-emerald-500 transition-all duration-300 dark:text-emerald-400 sm:text-2xl lg:text-3xl">
         PALMA
       </span>
     </a>
   );
 };
-
 export const NavbarButton = ({
   href,
   as: Tag = "a",
