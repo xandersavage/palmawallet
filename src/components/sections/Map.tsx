@@ -64,9 +64,13 @@ export function Map() {
     // 5. Attach the ref to the main div.
     <div ref={ref} className="py-10 md:py-40 dark:bg-black bg-white w-full">
       <div className="max-w-7xl mx-auto text-center">
-        <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
+        {/* <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
           🚀 Launching in Africa, Expanding Globally
-        </p>
+        </p> */}
+        <h2 className="mb-4 text-black dark:text-white max-w-4xl    text-2xl leading-snug tracking-wide md:text-xl lg:text:3xl xl:text-5xl font-bold">
+          Launching in Africa, Expanding
+          <span className="text-emerald-500"> Globally</span>
+        </h2>
         <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
           PALMA Wallet is launching first in Africa, with plans to expand to
           Latin America and beyond. Be among the first to experience the future

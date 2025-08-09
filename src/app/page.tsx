@@ -10,7 +10,7 @@ const page = () => {
     <>
       <Hero />
       <AboutTimeline />
-      <Container className="mt-20">
+      <Container className="pt-40">
         <Features />
       </Container>
       <Container>

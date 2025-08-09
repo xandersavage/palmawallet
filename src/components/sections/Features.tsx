@@ -3,26 +3,12 @@ import {
   IconBolt, // New icon for lightning fast
   IconShield, // New icon for privacy
   IconMapPin, // New icon for Africa-first
-  IconGauge,
   IconLock, // Retained from the last conversation
   IconDeviceMobile,
   IconUsers,
 } from "@tabler/icons-react";
-import { TypewriterEffect } from "../ui/typewriter-effect";
 
 export function Features() {
-  const words = [
-    {
-      text: "Why",
-    },
-    {
-      text: "Choose",
-    },
-    {
-      text: "PALMA?",
-      className: "text-emerald-500 dark:text-emerald-500",
-    },
-  ];
   const features = [
     {
       title: "Self-Custody Security",
@@ -63,7 +49,9 @@ export function Features() {
   ];
   return (
     <div>
-      <TypewriterEffect words={words} />
+      <h2 className="mb-4 text-black dark:text-white max-w-4xl    text-2xl leading-snug tracking-wide md:text-xl lg:text:3xl xl:text-5xl font-bold">
+        Why Choose <span className="text-emerald-500">PALMA?</span>
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  relative z-10 py-10 max-w-7xl mx-auto">
         {features.map((feature, index) => (
           <Feature key={feature.title} {...feature} index={index} />
