@@ -234,14 +234,14 @@ export const NavbarLogo = () => {
   return (
     <a
       href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+      className="relative z-20 flex items-center space-x-2 text-sm font-normal text-black"
     >
       <img
         src="https://assets.aceternity.com/logo-dark.png"
         alt="logo"
-        className="w-8 h-8 lg:w-20 lg:h-20"
+        className="h-8 w-8 transition-all duration-300 sm:h-10 sm:w-10 lg:h-12 lg:w-12"
       />
-      <span className="font-medium text-3xl text-emerald-500 dark:text-emerald-400">
+      <span className="text-xl font-medium text-emerald-500 transition-all duration-300 dark:text-emerald-400 sm:text-2xl lg:text-3xl">
         PALMA
       </span>
     </a>
