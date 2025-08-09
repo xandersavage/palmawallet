@@ -1,23 +1,11 @@
 "use client";
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useMemo } from "react";
 import WorldMap from "@/components/ui/world-map";
-import { motion, useInView } from "motion/react";
+import { PointerHighlight } from "../ui/pointer-highlight";
 
 export function Map() {
-  // 1. Create a ref to track the component's DOM element.
-  const ref = useRef(null);
-
-  // 2. Use useInView to detect when the ref is in the viewport.
-  //    `once: true` ensures the effect only runs a single time.
-  const isInView = useInView(ref, { once: true });
-
-  // 3. Use state to hold the dots. It starts as an empty array.
-  const [dots, setDots] = useState<
-    { start: { lat: number; lng: number }; end: { lat: number; lng: number } }[]
-  >([]);
-
   // The original dots array.
-  const originalDots = useMemo(
+  const dots = useMemo(
     () => [
       {
         start: {
@@ -53,39 +41,27 @@ export function Map() {
     []
   );
 
-  // 4. Use useEffect to update the dots state when the component is in view.
-  useEffect(() => {
-    if (isInView) {
-      setDots(originalDots);
-    }
-  }, [isInView, originalDots]);
-
   return (
     // 5. Attach the ref to the main div.
-    <div ref={ref} className="py-10 md:py-40 dark:bg-black bg-white w-full">
-      <div className="max-w-7xl mx-auto text-center">
-        {/* <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
-          🚀 Launching in Africa, Expanding Globally
-        </p> */}
+    <div className="py-10 md:py-40 dark:bg-black bg-white w-full">
+      <div className="max-w-7xl mx-auto">
         <h2 className="mb-4 text-black dark:text-white max-w-4xl    text-2xl leading-snug tracking-wide md:text-xl lg:text:3xl xl:text-5xl font-bold">
           Launching in Africa, Expanding
-          <span className="text-emerald-500"> Globally</span>
+          <PointerHighlight
+            rectangleClassName="bg-green-100 dark:bg-green-900 border-green-300 dark:border-green-700 leading-loose"
+            pointerClassName="text-green-500 h-3 w-3"
+            containerClassName="inline-block ml-1"
+          >
+            <span className="relative z-10 text-emerald-500"> Globally</span>
+          </PointerHighlight>
         </h2>
-        <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
+        <p className="text-sm md:text-lg text-neutral-500 max-w-2xl py-4">
           PALMA Wallet is launching first in Africa, with plans to expand to
           Latin America and beyond. Be among the first to experience the future
           of global crypto.
         </p>
       </div>
-      {/* 6. Pass the stateful `dots` to the WorldMap component. */}
-      {/* This will trigger the animation when the state changes. */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
-      >
-        <WorldMap dots={dots} />
-      </motion.div>
+      <WorldMap dots={dots} />
     </div>
   );
 }
