@@ -236,7 +236,7 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 flex items-center space-x-2 text-sm font-normal text-black"
     >
-      <div className="relative h-8 w-8 transition-all duration-300 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
+      <div className="relative h-12 w-12 transition-all duration-300 sm:h-14 sm:w-14 lg:h-16 lg:w-16">
         <Image
           src="/images/logo-2.png"
           alt="PALMA logo"
@@ -244,7 +244,10 @@ export const NavbarLogo = () => {
           style={{ objectFit: "contain" }}
         />
       </div>
-      <span className="text-xl font-medium text-emerald-500 transition-all duration-300 dark:text-emerald-400 sm:text-2xl lg:text-3xl">
+      <span
+        className="text-xl font-medium text-emerald-500 transition-all duration-300 dark:text-emerald-400 sm:text-2xl lg:text-3xl"
+        style={{ transform: "translateY(-6px)" }}
+      >
         PALMA
       </span>
     </a>
