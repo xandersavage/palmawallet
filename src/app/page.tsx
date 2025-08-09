@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { AboutTimeline } from "@/components/sections/About";
 import { Features } from "@/components/sections/Features";
 import { Map } from "@/components/sections/Map";
+import Footer from "@/components/layout/Footer";
 import Container from "@/components/layout/cointainer/Container";
 
 const page = () => {
@@ -15,6 +16,7 @@ const page = () => {
       <Container>
         <Map />
       </Container>
+      <Footer />
     </>
   );
 };
