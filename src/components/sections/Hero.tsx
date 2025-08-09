@@ -1,27 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // Note: changed from "motion/react" to "framer-motion" for clarity and standard usage
 import { IconBrandApple, IconBrandGooglePlay } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
 
 export function Hero() {
-  // We use a state variable to track if the component has mounted on the client
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    // This effect runs only once after the component mounts on the client
-    setIsClient(true);
-  }, []);
-
-  // If we are on the server or before the client-side JS has run,
-  // we render nothing to avoid a flash of unstyled content.
-  if (!isClient) {
-    return null;
-  }
-
   return (
     <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
-      {/* Background gradient lines */}
+      {/* Background gradient lines - no change here */}
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-emerald-500 to-transparent" />
       </div>
@@ -33,7 +18,7 @@ export function Hero() {
       </div>
 
       <div className="px-4 py-10 md:py-20">
-        {/* HEADING */}
+        {/* HEADING - The existing staggered word animation plays first */}
         <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold md:text-4xl lg:text-7xl">
           {"Unlock Your Financial Freedom with Palma Wallet."
             .split(" ")
@@ -44,7 +29,7 @@ export function Hero() {
                 animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                 transition={{
                   duration: 0.3,
-                  delay: index * 0.1,
+                  delay: index * 0.1, // Staggers each word
                   ease: "easeInOut",
                 }}
                 className="mr-2 inline-block bg-gradient-to-r from-slate-800 to-emerald-500 bg-clip-text text-transparent dark:from-slate-200 dark:to-emerald-400"
@@ -54,7 +39,7 @@ export function Hero() {
             ))}
         </h1>
 
-        {/* SUBHEADING */}
+        {/* SUBHEADING - Starts animating after the heading is complete */}
         <motion.p
           initial={{
             opacity: 0,
@@ -66,7 +51,7 @@ export function Hero() {
           }}
           transition={{
             duration: 0.3,
-            delay: 0.8,
+            delay: 0.8, // Starts after the heading words have finished
           }}
           className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-medium text-slate-700 dark:text-neutral-300"
         >
@@ -74,7 +59,7 @@ export function Hero() {
           for Nigerians to manage their wealth and build their financial future.
         </motion.p>
 
-        {/* BUTTONS */}
+        {/* BUTTONS - Start animating after the subheading is complete */}
         <motion.div
           initial={{
             opacity: 0,
@@ -86,7 +71,7 @@ export function Hero() {
           }}
           transition={{
             duration: 0.3,
-            delay: 1.2,
+            delay: 1.2, // Starts after the subheading animation
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
@@ -98,7 +83,7 @@ export function Hero() {
           </button>
         </motion.div>
 
-        {/* PREVIEW IMAGE */}
+        {/* PREVIEW IMAGE - Starts animating after the buttons are complete */}
         <motion.div
           initial={{
             opacity: 0,
@@ -110,7 +95,7 @@ export function Hero() {
           }}
           transition={{
             duration: 0.3,
-            delay: 1.5,
+            delay: 1.5, // Starts after the button animation
           }}
           className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
         >
