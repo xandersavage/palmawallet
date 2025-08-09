@@ -62,7 +62,7 @@ export function Map() {
 
   return (
     // 5. Attach the ref to the main div.
-    <div ref={ref} className="py-40 dark:bg-black bg-white w-full">
+    <div ref={ref} className="py-10 md:py-40 dark:bg-black bg-white w-full">
       <div className="max-w-7xl mx-auto text-center">
         <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
           🚀 Launching in Africa, Expanding Globally
