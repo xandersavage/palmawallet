@@ -24,7 +24,7 @@ const Container: React.FC<ContainerProps> = ({ children, className }) => {
       className={`
         max-w-7xl   /* Sets a maximum width for the content */
         mx-auto      /* Centers the container horizontally */
-        px-4         /* Horizontal padding for smaller screens */
+        px-10         /* Horizontal padding for smaller screens */
         sm:px-6      /* Increased padding on small screens and up */
         lg:px-8      /* Further increased padding on large screens and up */
         ${className || ""} /* Merges any additional classes passed in */
