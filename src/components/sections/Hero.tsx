@@ -1,12 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion"; // Note: changed from "motion/react" to "framer-motion" for clarity and standard usage
+import { memo } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import { IconBrandApple, IconBrandGooglePlay } from "@tabler/icons-react";
 
-export function Hero() {
+const headingWords = "Unlock Your Financial Freedom with Palma Wallet.".split(
+  " "
+);
+
+// Background gradient lines - static & memoized
+function BackgroundLinesComponent() {
   return (
-    <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
-      {/* Background gradient lines - no change here */}
+    <>
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-emerald-500 to-transparent" />
       </div>
@@ -16,63 +22,76 @@ export function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-px w-full bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
       </div>
+    </>
+  );
+}
+
+const BackgroundLines = memo(BackgroundLinesComponent);
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const wordVariants = {
+  hidden: { opacity: 0, filter: "blur(4px)", y: 10 },
+  visible: {
+    opacity: 1,
+    filter: "blur(0px)",
+    y: 0,
+    transition: { duration: 0.3, ease: "easeInOut" },
+  },
+};
+
+const fadeUpVariants = (delay = 0) => ({
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3, delay } },
+});
+
+export function Hero() {
+  return (
+    <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
+      <BackgroundLines />
 
       <div className="px-4 py-10 md:py-20">
-        {/* HEADING - The existing staggered word animation plays first */}
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold md:text-4xl lg:text-7xl">
-          {"Unlock Your Financial Freedom with Palma Wallet."
-            .split(" ")
-            .map((word, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
-                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.1, // Staggers each word
-                  ease: "easeInOut",
-                }}
-                className="mr-2 inline-block bg-gradient-to-r from-slate-800 to-emerald-500 bg-clip-text text-transparent dark:from-slate-200 dark:to-emerald-400"
-              >
-                {word}
-              </motion.span>
-            ))}
-        </h1>
+        {/* HEADING */}
+        <motion.h1
+          className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold md:text-4xl lg:text-7xl"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {headingWords.map((word, index) => (
+            <motion.span
+              key={index}
+              variants={wordVariants}
+              className="mr-2 inline-block bg-gradient-to-r from-slate-800 to-emerald-500 bg-clip-text text-transparent dark:from-slate-200 dark:to-emerald-400"
+            >
+              {word}
+            </motion.span>
+          ))}
+        </motion.h1>
 
-        {/* SUBHEADING - Starts animating after the heading is complete */}
+        {/* SUBHEADING */}
         <motion.p
-          initial={{
-            opacity: 0,
-            y: 10,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.3,
-            delay: 0.8, // Starts after the heading words have finished
-          }}
+          variants={fadeUpVariants(0.2)}
+          initial="hidden"
+          animate="visible"
           className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-medium text-slate-700 dark:text-neutral-300"
         >
           Your money, your rules. Palma Wallet is the secure, non-custodial way
           for Nigerians to manage their wealth and build their financial future.
         </motion.p>
 
-        {/* BUTTONS - Start animating after the subheading is complete */}
+        {/* BUTTONS */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 10,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.3,
-            delay: 1.2, // Starts after the subheading animation
-          }}
+          variants={fadeUpVariants(0.4)}
+          initial="hidden"
+          animate="visible"
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
           <button className="flex w-60 transform items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-600">
@@ -83,29 +102,21 @@ export function Hero() {
           </button>
         </motion.div>
 
-        {/* PREVIEW IMAGE - Starts animating after the buttons are complete */}
+        {/* PREVIEW IMAGE */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 10,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.3,
-            delay: 1.5, // Starts after the button animation
-          }}
+          variants={fadeUpVariants(0.6)}
+          initial="hidden"
+          animate="visible"
           className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
         >
           <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
-            <img
+            <Image
               src="https://assets.aceternity.com/pro/aceternity-landing.webp"
               alt="Crypto wallet UI preview"
-              className="aspect-[16/9] h-auto w-full object-cover"
-              height={1000}
               width={1000}
+              height={562}
+              className="aspect-[16/9] h-auto w-full object-cover"
+              priority
             />
           </div>
         </motion.div>
