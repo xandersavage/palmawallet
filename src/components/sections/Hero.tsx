@@ -1,7 +1,6 @@
 "use client";
 
 import { memo } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { IconBrandApple, IconBrandGooglePlay } from "@tabler/icons-react";
 
@@ -28,30 +27,6 @@ function BackgroundLinesComponent() {
 
 const BackgroundLines = memo(BackgroundLinesComponent);
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const wordVariants = {
-  hidden: { opacity: 0, filter: "blur(4px)", y: 10 },
-  visible: {
-    opacity: 1,
-    filter: "blur(0px)",
-    y: 0,
-    transition: { duration: 0.3, ease: "easeInOut" },
-  },
-};
-
-const fadeUpVariants = (delay = 0) => ({
-  hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.3, delay } },
-});
-
 export function Hero() {
   return (
     <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
@@ -59,56 +34,35 @@ export function Hero() {
 
       <div className="px-4 py-10 md:py-20">
         {/* HEADING */}
-        <motion.h1
-          className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold md:text-4xl lg:text-7xl"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold md:text-4xl lg:text-7xl">
           {headingWords.map((word, index) => (
-            <motion.span
+            <span
               key={index}
-              variants={wordVariants}
               className="mr-2 inline-block bg-gradient-to-r from-slate-800 to-emerald-500 bg-clip-text text-transparent dark:from-slate-200 dark:to-emerald-400"
             >
               {word}
-            </motion.span>
+            </span>
           ))}
-        </motion.h1>
+        </h1>
 
         {/* SUBHEADING */}
-        <motion.p
-          variants={fadeUpVariants(0.2)}
-          initial="hidden"
-          animate="visible"
-          className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-medium text-slate-700 dark:text-neutral-300"
-        >
+        <p className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-medium text-slate-700 dark:text-neutral-300">
           Your money, your rules. Palma Wallet is the secure, non-custodial way
           for Nigerians to manage their wealth and build their financial future.
-        </motion.p>
+        </p>
 
         {/* BUTTONS */}
-        <motion.div
-          variants={fadeUpVariants(0.4)}
-          initial="hidden"
-          animate="visible"
-          className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
-        >
+        <div className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4">
           <button className="flex w-60 transform items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-600">
             <IconBrandApple /> Get it on App Store
           </button>
           <button className="flex w-60 transform items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
             <IconBrandGooglePlay /> Get it on Google Play
           </button>
-        </motion.div>
+        </div>
 
         {/* PREVIEW IMAGE */}
-        <motion.div
-          variants={fadeUpVariants(0.6)}
-          initial="hidden"
-          animate="visible"
-          className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
-        >
+        <div className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900">
           <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
             <Image
               src="https://assets.aceternity.com/pro/aceternity-landing.webp"
@@ -119,7 +73,7 @@ export function Hero() {
               priority
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
