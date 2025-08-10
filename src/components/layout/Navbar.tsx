@@ -34,7 +34,9 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="dark">Get on IOS</NavbarButton>
+            <NavbarButton variant="dark" className="bg-emerald-500">
+              Get on IOS
+            </NavbarButton>
             <NavbarButton variant="primary">Get on Android</NavbarButton>
           </div>
         </NavBody>
@@ -67,7 +69,7 @@ export function NavbarDemo() {
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="dark"
-                className="w-full"
+                className="w-full bg-emerald-500"
               >
                 Get on IOS
               </NavbarButton>

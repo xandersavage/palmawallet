@@ -9,11 +9,13 @@ const page = () => {
   return (
     <>
       <Hero />
-      <AboutTimeline />
-      <Container className="pt-40">
+      <Container className="lg:pt-40 pt-20">
+        <AboutTimeline />
+      </Container>
+      <Container className="lg:pt-40 pt-20">
         <Features />
       </Container>
-      <Container>
+      <Container className="lg:pt-40 pt-20">
         <Map />
       </Container>
       <Footer />
