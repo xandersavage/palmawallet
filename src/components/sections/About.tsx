@@ -1,5 +1,6 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
+import Image from "next/image"; // Import the Next.js Image component
 
 export function AboutTimeline() {
   const data = [
@@ -13,15 +14,19 @@ export function AboutTimeline() {
             and trust — empowering Africans to own and protect their wealth.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/templates/startup-1.webp"
-              alt="Secure storage illustration"
-              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 md:h-60"
+            <Image
+              src="/images/palma-2.png"
+              alt="Palma Wallet UI screen"
+              width={300}
+              height={500}
+              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 h-60 md:h-80 lg:h-96"
             />
-            <img
-              src="https://assets.aceternity.com/templates/startup-2.webp"
-              alt="Financial empowerment illustration"
-              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 md:h-60"
+            <Image
+              src="/images/palma-3.png"
+              alt="Palma Wallet UI screen"
+              width={300}
+              height={500}
+              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 h-60 md:h-80 lg:h-96"
             />
           </div>
         </div>
@@ -40,15 +45,19 @@ export function AboutTimeline() {
             the African Web3 landscape.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="Hero section example"
-              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 md:h-60"
+            <Image
+              src="/images/palma-4.png"
+              alt="Palma Wallet UI screen"
+              width={300}
+              height={500}
+              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 h-60 md:h-80 lg:h-96"
             />
-            <img
-              src="https://assets.aceternity.com/features-section.png"
-              alt="Features section example"
-              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 md:h-60"
+            <Image
+              src="/images/palma-5.png"
+              alt="Palma Wallet UI screen"
+              width={300}
+              height={500}
+              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 h-60 md:h-80 lg:h-96"
             />
           </div>
         </div>
@@ -64,15 +73,19 @@ export function AboutTimeline() {
             through secure, borderless finance.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="Creative layout example"
-              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 md:h-60"
+            <Image
+              src="/images/palma-6.png"
+              alt="Palma Wallet UI screen"
+              width={300}
+              height={500}
+              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 h-60 md:h-80 lg:h-96"
             />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="Card layout example"
-              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 md:h-60"
+            <Image
+              src="/images/palma-7.png"
+              alt="Palma Wallet UI screen"
+              width={300}
+              height={500}
+              className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 h-60 md:h-80 lg:h-96"
             />
           </div>
         </div>

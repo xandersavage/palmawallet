@@ -3,6 +3,7 @@
 import { memo } from "react";
 import Image from "next/image";
 import { IconBrandApple, IconBrandGooglePlay } from "@tabler/icons-react";
+import { PhoneMockup } from "../phoneMockup/phoneMockup";
 
 const headingWords = "Unlock Your Financial Freedom with Palma Wallet.".split(
   " "
@@ -62,17 +63,17 @@ export function Hero() {
         </div>
 
         {/* PREVIEW IMAGE */}
-        <div className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900">
-          <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
+        <div className="relative z-10 mt-20">
+          <PhoneMockup>
             <Image
-              src="https://assets.aceternity.com/pro/aceternity-landing.webp"
-              alt="Crypto wallet UI preview"
-              width={1000}
-              height={562}
-              className="aspect-[16/9] h-auto w-full object-cover"
+              src="/images/palma-1.png"
+              alt="Palma Wallet UI preview"
+              width={500}
+              height={900}
+              className="h-full w-full object-cover"
               priority
             />
-          </div>
+          </PhoneMockup>
         </div>
       </div>
     </div>
