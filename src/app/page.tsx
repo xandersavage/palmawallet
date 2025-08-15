@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { AboutTimeline } from "@/components/sections/About";
+import { AboutUs } from "@/components/sections/AboutUs";
 import { Features } from "@/components/sections/Features";
 import { Map } from "@/components/sections/Map";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -13,6 +14,9 @@ const page = () => {
       <Hero />
       <Container className="lg:pt-40 pt-20">
         <AboutTimeline />
+      </Container>
+      <Container className="lg:pt-40 pt-20">
+        <AboutUs />
       </Container>
       <Container className="lg:pt-40 pt-20">
         <Features />

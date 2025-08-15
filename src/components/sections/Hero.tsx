@@ -54,12 +54,22 @@ export function Hero() {
 
         {/* BUTTONS */}
         <div className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4">
-          <button className="flex w-60 transform items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-600">
+          <a
+            href="https://apps.apple.com/us/app/palma-wallet/id6747275024"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-60 transform items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-600"
+          >
             <IconBrandApple /> Get it on App Store
-          </button>
-          <button className="flex w-60 transform items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.palmwallet&pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-60 transform items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900"
+          >
             <IconBrandGooglePlay /> Get it on Google Play
-          </button>
+          </a>
         </div>
 
         {/* PREVIEW IMAGE */}

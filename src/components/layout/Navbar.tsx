@@ -15,12 +15,12 @@ import { useState } from "react";
 export function NavbarDemo() {
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "About Us",
+      link: "#about-us",
     },
     {
-      name: "Our Story",
-      link: "#our-story",
+      name: "Features",
+      link: "#features",
     },
   ];
 
@@ -34,10 +34,23 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="dark" className="bg-emerald-500">
+            <NavbarButton
+              variant="dark"
+              className="bg-emerald-500"
+              href="https://apps.apple.com/us/app/palma-wallet/id6747275024"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Get on IOS
             </NavbarButton>
-            <NavbarButton variant="primary">Get on Android</NavbarButton>
+            <NavbarButton
+              variant="primary"
+              href="https://play.google.com/store/apps/details?id=com.palmwallet&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get on Android
+            </NavbarButton>
           </div>
         </NavBody>
 
@@ -70,6 +83,9 @@ export function NavbarDemo() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="dark"
                 className="w-full bg-emerald-500"
+                href="https://apps.apple.com/us/app/palma-wallet/id6747275024"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Get on IOS
               </NavbarButton>
@@ -77,6 +93,9 @@ export function NavbarDemo() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
+                href="https://play.google.com/store/apps/details?id=com.palmwallet&pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Get on Android
               </NavbarButton>

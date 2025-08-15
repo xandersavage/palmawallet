@@ -6,8 +6,11 @@ import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 export function Testimonials() {
   return (
     <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <h2 className="mb-4 text-black dark:text-white max-w-4xl    text-2xl leading-snug tracking-wide md:text-xl lg:text:3xl xl:text-5xl font-bold">
-        What Our Users Are <span className="text-emerald-500">Saying</span>
+      <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4 dark:text-white">
+        What Our Users Are{" "}
+        <span className="bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
+          Saying
+        </span>
       </h2>
       <InfiniteMovingCards
         items={testimonials}

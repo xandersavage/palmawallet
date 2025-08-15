@@ -32,11 +32,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10">
-        <h2 className="mb-4 text-black dark:text-white max-w-4xl    text-2xl leading-snug tracking-wide md:text-xl lg:text:3xl xl:text-5xl font-bold">
-          The Story Behind <span className="text-emerald-500">PALMA</span>
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10 text-center">
+        <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4 dark:text-white">
+          The Story Behind{" "}
+          <span className="bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
+            Palma
+          </span>
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm max-w-sm md:text-lg lg:text-2xl">
+        <p className="text-neutral-700 dark:text-neutral-300 text-sm max-w-sm md:text-lg lg:text-2xl mx-auto">
           The taller the palm tree, the deeper its roots.
         </p>
       </div>

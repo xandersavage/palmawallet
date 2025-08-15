@@ -48,9 +48,12 @@ export function Features() {
     },
   ];
   return (
-    <div>
-      <h2 className="mb-4 text-black dark:text-white max-w-4xl    text-2xl leading-snug tracking-wide md:text-xl lg:text:3xl xl:text-5xl font-bold">
-        Why Choose <span className="text-emerald-500">PALMA?</span>
+    <div id="features" className="mx-auto max-w-7xl">
+      <h2 className="text-center text-4xl font-bold text-gray-900 sm:text-5xl mb-4 dark:text-white">
+        Why Choose{" "}
+        <span className="bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
+          Palma?
+        </span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  relative z-10 py-10 max-w-7xl mx-auto">
         {features.map((feature, index) => (
