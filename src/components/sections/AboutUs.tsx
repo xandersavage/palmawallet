@@ -5,17 +5,17 @@ export function AboutUs() {
   const testimonials = [
     {
       quote:
-        "African fintech expert with deep understanding of local payment challenges and solutions. Alex's technical leadership and market insights are instrumental in building PALMA's Africa-first approach to cryptocurrency adoption.",
-      name: "Alex ‘Zico’ Ibe",
-      designation: "Cofounder & CMO",
-      src: "/images/alex.png",
-    },
-    {
-      quote:
         "Experienced entrepreneur and technology leader with a passion for financial innovation. Eugene brings deep expertise in blockchain technology and product development to drive PALMA's mission of democratizing financial access across Africa.",
       name: "Eugene Luzgin",
       designation: "Co-Founder & CEO",
       src: "/images/eugene.jpg",
+    },
+    {
+      quote:
+        "African fintech expert with deep understanding of local payment challenges and solutions. Alex's technical leadership and market insights are instrumental in building PALMA's Africa-first approach to cryptocurrency adoption.",
+      name: "Alex ‘Zico’ Ibe",
+      designation: "Cofounder & CMO",
+      src: "/images/alex.png",
     },
   ];
 
