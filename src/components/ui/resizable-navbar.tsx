@@ -9,7 +9,7 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -237,10 +237,10 @@ export const NavbarLogo = () => {
       className="relative z-20 flex items-center space-x-2 text-sm font-normal text-black"
     >
       <div className="relative h-12 w-12 transition-all duration-300 sm:h-14 sm:w-14 lg:h-16 lg:w-16">
-        <Image
+        <img
           src="/images/logo-2.png"
           alt="PALMA logo"
-          fill
+          className="h-full w-full"
           style={{ objectFit: "contain" }}
         />
       </div>

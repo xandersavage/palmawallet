@@ -1,7 +1,7 @@
 "use client";
 
 import { memo } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { IconBrandApple, IconBrandGooglePlay } from "@tabler/icons-react";
 import { PhoneMockup } from "../phoneMockup/phoneMockup";
 
@@ -75,13 +75,13 @@ export function Hero() {
         {/* PREVIEW IMAGE */}
         <div className="relative z-10 mt-20">
           <PhoneMockup>
-            <Image
+            <img
               src="/images/palma-1.png"
               alt="Palma Wallet UI preview"
               width={500}
               height={900}
               className="h-full w-full object-cover"
-              priority
+              // priority
             />
           </PhoneMockup>
         </div>

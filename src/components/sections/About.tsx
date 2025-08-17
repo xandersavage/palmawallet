@@ -1,6 +1,6 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
-import Image from "next/image"; // Import the Next.js Image component
+// import Image from "next/image"; // Import the Next.js Image component
 
 export function AboutTimeline() {
   const data = [
@@ -14,14 +14,14 @@ export function AboutTimeline() {
             and trust — empowering Africans to own and protect their wealth.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Image
+            <img
               src="/images/palma-2.png"
               alt="Palma Wallet UI screen"
               width={300}
               height={500}
               className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 h-60 md:h-80 lg:h-96"
             />
-            <Image
+            <img
               src="/images/palma-3.png"
               alt="Palma Wallet UI screen"
               width={300}
@@ -45,14 +45,14 @@ export function AboutTimeline() {
             the African Web3 landscape.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Image
+            <img
               src="/images/palma-4.png"
               alt="Palma Wallet UI screen"
               width={300}
               height={500}
               className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 h-60 md:h-80 lg:h-96"
             />
-            <Image
+            <img
               src="/images/palma-5.png"
               alt="Palma Wallet UI screen"
               width={300}
@@ -73,14 +73,14 @@ export function AboutTimeline() {
             through secure, borderless finance.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Image
+            <img
               src="/images/palma-6.png"
               alt="Palma Wallet UI screen"
               width={300}
               height={500}
               className="rounded-lg object-cover shadow-lg hover:scale-[1.02] transition-transform duration-300 h-60 md:h-80 lg:h-96"
             />
-            <Image
+            <img
               src="/images/palma-7.png"
               alt="Palma Wallet UI screen"
               width={300}
