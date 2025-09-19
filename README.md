@@ -121,6 +121,6 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-**This website was designed and developed by Alexander Olomokoro.**
+**This website was designed and developed by Alexander Olomukoro.**
 
 **Palma Wallet — Africa’s gateway to financial freedom.**
