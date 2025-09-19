@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Palma Wallet Landing Page
 
-## Getting Started
+**Unlock Your Financial Freedom with Palma Wallet.**  
+_Your money, your rules. Palma Wallet is the secure, non-custodial way for Nigerians to manage their wealth and build their financial future._
 
-First, run the development server:
+---
+
+## 🌍 Overview
+
+Palma Wallet is an Africa-first crypto fintech platform, designed to empower individuals across the continent—starting with Nigeria—to take control of their financial destiny. This landing page introduces Palma Wallet’s mission, features, and leadership, serving as the digital front door for users, partners, and investors.
+
+---
+
+## 🚀 What is Palma Wallet?
+
+Palma Wallet is a secure, non-custodial cryptocurrency wallet built for Africans. It enables users to:
+
+- **Safely store, send, and receive crypto assets**
+- **Retain full control over their private keys and funds**
+- **Access financial tools without intermediaries or restrictive KYC**
+- **Transact instantly and affordably across Africa**
+
+Inspired by the resilience and strength of the palm tree, Palma Wallet is built on the principles of self-custody, security, and trust—empowering Africans to own and protect their wealth.
+
+---
+
+## ✨ Key Features
+
+- **Self-Custody Security:**  
+  Your keys, your crypto. Complete control over your digital assets with military-grade security.
+
+- **Lightning Fast:**  
+  Send and receive crypto instantly across Africa with minimal fees and maximum speed.
+
+- **Africa-First Design:**  
+  Built for African users, supporting local currencies and payment methods.
+
+- **Mobile-First:**  
+  Optimized for mobile devices with offline capabilities for areas with limited connectivity.
+
+- **Privacy Protected:**  
+  Your financial privacy is paramount. No KYC required for basic wallet functions.
+
+- **Global Community:**  
+  Join a growing global community of crypto enthusiasts building financial freedom together.
+
+---
+
+## 🌱 Our Mission & Values
+
+- **Deep Roots, Strong Foundation:**  
+  Palma Wallet is built to empower Africans with financial independence, starting with strong roots in self-custody and trust.
+
+- **Resilience:**  
+  Like the palm tree, Palma Wallet is designed to withstand market volatility and adapt to the evolving African Web3 landscape.
+
+- **Innovation:**  
+  Leveraging blockchain technology to democratize financial access and drive economic growth across Africa.
+
+---
+
+## 👥 Leadership Team
+
+- **Eugene Luzgin** — Co-Founder & CEO  
+  Experienced entrepreneur and technology leader with a passion for financial innovation. Eugene brings deep expertise in blockchain technology and product development to drive Palma’s mission.
+
+- **Alex ‘Zico’ Ibe** — Co-Founder & CMO  
+  African fintech expert with deep understanding of local payment challenges and solutions. Alex’s technical leadership and market insights are instrumental in building Palma’s Africa-first approach.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js, React, Tailwind CSS
+- **Icons & Animations:** Tabler Icons, custom UI components
+- **Deployment:** Vercel
+
+---
+
+## 📱 Download Palma Wallet
+
+- [Get on Apple App Store](https://apps.apple.com/us/app/palma-wallet/id6747275024)
+- [Google Play Store link coming soon]
+
+---
+
+## 🏗️ Local Development
+
+To run the landing page locally:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contributing
 
-## Learn More
+We welcome contributions that help us further our mission of financial freedom for Africa. Please open issues or pull requests for improvements, bug fixes, or new features.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📢 Contact & Socials
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Website](https://palmawallet.com)
+- [Twitter](https://twitter.com/palmawallet)
+- [LinkedIn](https://linkedin.com/company/palmawallet)
+
+---
+
+## 👨‍💻 Author
+
+**This website was designed and developed by Alexander Olomokoro.**
+
+**Palma Wallet — Africa’s gateway to financial freedom.**
