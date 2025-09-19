@@ -3,6 +3,8 @@
 **Unlock Your Financial Freedom with Palma Wallet.**  
 _Your money, your rules. Palma Wallet is the secure, non-custodial way for Nigerians to manage their wealth and build their financial future._
 
+Live Preview: https://palmawallet.com/
+
 ---
 
 ## 🌍 Overview
